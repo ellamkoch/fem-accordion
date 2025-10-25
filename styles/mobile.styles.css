@@ -1,0 +1,181 @@
+
+/* Import CSS Files*/
+@import './utilities/variables.css';
+@import './utilities/utilities.css';
+
+/*resets styles*/
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* main pages styles*/
+html, body {
+    height: 100%;
+}
+
+body { /*var pulls from the variable.css file*/
+    background-color: var(--color-purple-100);
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-workSans);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+    color: var(--color-purple-950);
+    min-height: 100vh; /*sets min viewport height*/
+}
+
+hr {
+    display: block;
+    width: 100%;
+    border-top: 1px solid var(--color-purple-100);/* border top helps to make this thinner*/
+    margin: 1rem 0;
+
+}
+
+button {
+    background: none;
+    font-family: var(--font-workSans);
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-semi-bold);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+    line-height: 1;
+    color: var(--color-purple-950);
+    margin: 0;
+
+}
+
+button:hover {
+    color: hsl(292, 73%, 44%);
+
+}
+
+.background-graphic {
+    background-image: url('../assets/images/background-pattern-mobile.svg');
+    height: 300px;
+}
+
+/*main container styles*/
+.faq-main-container {
+    background-color: var(--color-white);
+    width: 90%;
+    height: fit-content;
+    max-width: 375px;
+    margin: -100px auto 0; /*-100 makes it so it floats/overlaps over the background */
+    padding: 1.5rem 1rem; /*top/bottom and l/r*/
+    border-radius: 1rem;
+
+}
+
+/* header styles*/
+.faq-heading {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center; /* makes the # and title on the same line*/
+    margin: 0 auto;
+    padding: 1rem;
+    justify-content: flex-start; /*aligns container to the left*/
+
+}
+
+.faq-header__title {
+    font-family: var(--font-workSans);
+    font-weight: var(--font-weight-bold);
+    font-size: 2.5rem;
+    color: var(--color-purple-950);
+    line-height: 1; /*makes it so the faq heading isnt spaced down as far as the global*/
+}
+
+.faq-header__img {
+    height: auto;
+    width: 1.75rem;
+
+}
+/* faq container styles*/
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+
+}
+
+.faq-item {
+    width: 100%;
+    padding: .5rem 0;
+
+}
+
+/* answer styles*/
+.faq-toggle-btn {
+    display: flex;
+    align-items: center; /* keeps txt and icon vertically aligned*/
+    justify-content: space-between;
+    width: 100%;
+    gap: .75rem;
+    padding: .75rem 0;
+
+}
+
+.faq-item.active+ .faq-answer { /*targets elements with the class faq-item.active and then selects the sibling, .faq-answer to apply styles*/
+    max-height: 1000px;
+    transition: max-height 200ms ease;/* smooth opening*/
+}
+
+.faq-open__img {
+    display: block;
+}
+
+.faq-close__img {
+    display: none; /* hides this initially, js will show it*/
+}
+
+.faq-item.active
+.faq-open__img {
+    display: none;
+}
+.faq-item.active
+.faq-close__img {
+    display: block;
+}
+
+.faq-open__img,
+.faq-close__img {
+    margin-left: 1.5rem;
+    width: 2rem;
+    height: auto;
+}
+
+.attribution {
+    padding: 1rem;
+
+}
+
+.faq-answer {
+    width: 100%;
+    padding: 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+}
+
+.faq-answer__text {
+    font-family: var(--font-workSans);
+    font-weight: var(--font-weight-semi-bold);
+    width: 100%;
+    color: var(--color-purple-600);
+    font-size: 1rem;
+
+
+
+}
+

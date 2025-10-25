@@ -1,0 +1,66 @@
+@media (min-width: 900px) {
+  .main {
+    margin: 0;
+    padding: 0;
+    display: block;
+
+  }
+
+ .background-graphic {
+    width: 100%;
+    height: 350px;
+    background-image: url('../assets/images/background-pattern-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+ }
+
+.faq-main-container {
+    max-width: 640px;
+    margin: -140px auto 0; /* makes it so this overlaps the background bar image*/
+    padding: 2.25rem 2rem;
+    border-radius: 1.25rem;
+
+}
+
+.faq-header__title {
+    font-size: 3rem;
+    line-height: 1.05;
+}
+
+.faq-header__img {
+    width: 2rem;
+  }
+
+.faq-toggle-btn {
+    padding: 1rem 0;
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+hr {
+    border-top: 1px solid var(--color-purple-100);
+    margin: 0.75rem 0 0.75rem; /* top, r/l, bottom*/
+  }
+
+ .faq-answer {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden; /* helps keep the text hidden before revealing it*/
+    padding: 0;
+ }
+
+ .faq-answer__text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-purple-600);
+    max-width: 100%;
+    transition: max-height 0.2s ease-out, padding 0.2s ease-out; /* controls transition when area is revealed*/
+  }
+
+  .faq-open__img,
+  .faq-close__img {
+    width: 1.75rem; /* sets width for image*/
+    margin-left: 1rem; /*adds space between question txt and icon*/
+  }
+}
