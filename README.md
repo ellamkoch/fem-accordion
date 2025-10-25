@@ -89,6 +89,9 @@ This simple CSS logic makes it all work visually:
   padding: 0 1rem 1rem;
 }
 
+#### After Presentation Updates
+Learned during the presentation with Ulises that hover styles are not for mobile. Decided I would take a second look at the styles of the page to try and update them a lil bit more so it was closer to the design from Front End Mentor. Moved the hover to the desktop styles, removed some padding and margins in some areas such as the hr to make the question heading more aligned in the cells. Tried to put in comments for the ones I adjusted after the fact. Also made the font size a lil bigger on the faq__title a lil bigger for the mobile side.
+
 ### Continued development
 In future projects, I want to:
 -Add keyboard navigation (using aria-expanded and Enter/Space keys)
@@ -107,4 +110,4 @@ In future projects, I want to:
 - Frontend Mentor - [@ellamkoch](https://www.frontendmentor.io/profile/ellamkoch)
 
 ## Acknowledgments
-Thanks to all the youtube video walkthroughs creators and the reference sites to help explain and learn new functionality.
+Thanks to all the youtube video walkthroughs creators and the reference sites to help explain and learn new functionality. And a big thanks to Ulises for being so patient with us as we code last minute and providing great feedback. I'm sure you could tell I was nervous to start, but once you get me talking its a bit easier for me to explain what's going on with the code and page. 
